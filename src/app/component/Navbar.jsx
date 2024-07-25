@@ -12,9 +12,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { League_Spartan } from "next/font/google";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const fontss = League_Spartan({
+  subsets: ['latin'],
+  weight: ['800']
+});
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,16 +51,16 @@ function Navbar() {
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              mr: 7,
+              mr: 9,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: fontss.style.fontFamily,
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'black',
               textDecoration: 'none',
             }}
           >
-            thrift kada
+           the thrift kada
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -104,14 +109,14 @@ function Navbar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: fontss.style.fontFamily,
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.1rem',
               color: 'black',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            the thrift kada
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
