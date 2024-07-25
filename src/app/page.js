@@ -6,14 +6,26 @@ import { League_Spartan } from "next/font/google";
 import Navbar from "./component/Navbar";
 import Hoverer from "./component/Hoverer";
 import Hoverer2 from "./component/Hoverer2";
-
+import { useState } from "react";
 const fontss = League_Spartan({
   subsets: ['latin'],
   weight: ['800']
 });
 
 export default function Home() {
-  const ismobile = window.innerWidth <= 768;
+  const [ismobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // This will only run on the client side
+    const checkIsMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkIsMobile();
+
+    // Add event listener to handle window resize
+    window.addEventListener('resize', checkIsMobile);
+
+    // Clean up the event listener
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
   useEffect(() => {
     const t1 = gsap.timeline();
 
