@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/component/Navbar.jsx"  ],
+, "src/app/component/Navbar.jsx", "tailwind.config.js", "src/lib/utils.js"  ],
   "exclude": [
     "node_modules"
   ]

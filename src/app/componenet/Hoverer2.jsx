@@ -13,12 +13,12 @@ export default function ThreeDCardDemo() {
           translateZ="50"
           className="text-x1 font-bold text-neutral-600 dark:text-white"
         >
-          Men
+          Women
         </CardItem>
-       
+        
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
-            src="/man.jpeg"
+            src="/female.jpeg"
             height="1000"
             width="1000"
             className="h-65 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -34,13 +34,6 @@ export default function ThreeDCardDemo() {
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
           >
             Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Sign up
           </CardItem>
         </div>
       </CardBody>
