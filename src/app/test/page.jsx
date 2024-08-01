@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { useEffect ,useState} from 'react'
-const page = () => {
+const Page = () => {
   const [jeans,setjeans]=useState([]);
     useEffect(()=>{
       const fetchjeans=async()=>{
