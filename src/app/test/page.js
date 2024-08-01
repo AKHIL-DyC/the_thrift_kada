@@ -5,7 +5,7 @@ const Page = () => {
   const [jeans,setjeans]=useState([]);
     useEffect(()=>{
       const fetchjeans=async()=>{
-        const response=await fetch("http://localhost:3000/api/showjeans")
+        const response=await fetch("https://the-thrift-kada.vercel.app/api/showjeans")
         const data= await response.json();
         setjeans(data);
       }
